@@ -1,28 +1,26 @@
-header {
+/*
+h1 {
+    text-align: center;
+    background-color: gray;
+    margin: 0;
+    padding: 20px;
     position: fixed;
     top: 0;
-    /* width: 100% */
     left: 0;
     right: 0;
-    background-color: rgb(94, 93, 93); 
     z-index: 2;
 }
 
-.toptitle {
+a {
+    color: white;
     text-decoration: none;
-    color: azure;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-
-h1 {
-    text-align: center;
-}
 
 h2 {
     position: relative; top: 50%; left: 50%; 
     transform: translate(-50%, -50%); 
-    margin-top: 80px;
+    margin-top: 120px;
     text-align: center;
     z-index: 1;
     width: auto;
@@ -30,7 +28,7 @@ h2 {
 
 
 body {
-    padding-top: 75px;
+    margin: 0;
 }
 
 
@@ -43,7 +41,7 @@ ul {
     height: 100%;
     z-index: 1;
     background: gray;
-    margin-top: 86px;
+    margin-top: 83px;
     margin-right: 15px;
     padding-left: 0;
     text-align: center;
@@ -67,10 +65,12 @@ li a:hover:not(.active) {
     color: white;
 }
 
+
 img {
     margin: auto;
     display: block;
 }
+
 
 p {
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -81,9 +81,64 @@ p {
     text-align: center;
     max-width: 1500px;
 }
+*/
+
+body{
+    margin:0;
+}
+
+a {
+    color:black;
+    text-decoration: none;
+}
+
+h1 {
+    border-bottom: 1px solid gray;
+    background-color: gray;
+    text-align: center;
+    font-size:45px;
+    margin:0;
+    padding:20px;
+}
+
+ul{
+    border-right:1px solid gray;
+    width:100px;
+    margin:0;
+    padding:20px;
+}
+
+#grid{
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    /*템플릿의 열의 비율 150px,1fr*/
+}
+
+#grid ul{
+    padding-left:33px;
+}
+
+#grid #article{
+    padding: 0px 25px;
+}
+
+@media (max-width:600px) {
+    /*미디어쿼리 반응형 선택자
+    맥스값에서 반응 맥스값 이후 반응x*/
+    #grid {
+        display: block;   
+    }
+    ul {
+        border-right: none;
+    }
+    h1 {
+        border-bottom: none;
+    }
+}
 
 .comment {
-    margin-left: 120px;
+    margin: 25px 25px;
+    /*댓글기능 클래스*/
 }
 
 footer {
